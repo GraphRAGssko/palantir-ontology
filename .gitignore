@@ -1,6 +1,8 @@
-node_modules/.bin
-node_modules/.pnpm
-node_modules/.pnpm-task-run-state-v1
+# 1. node_modules 전체를 무시
+node_modules/*
+# 2. 단, 아래 폴더들은 무시하지 않음 (업로드 대상)
+!node_modules/pg/
+
 dist/
 *.tsbuildinfo
 .env
