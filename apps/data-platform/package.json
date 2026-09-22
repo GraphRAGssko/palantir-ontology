@@ -1,0 +1,23 @@
+{
+  "name": "@fastcampus-ontology/data-platform",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^6.20.0",
+    "@blueprintjs/datetime2": "^3.2.6",
+    "@blueprintjs/icons": "^6.14.1",
+    "date-fns": "^4.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  }
+}

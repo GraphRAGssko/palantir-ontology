@@ -1,0 +1,1211 @@
+/* ------------------------------------------------------------------ */
+/*  Layout                                                             */
+/* ------------------------------------------------------------------ */
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+}
+
+.app-shell {
+  display: flex;
+  height: 100vh;
+  background: #f6f7f9;
+}
+
+/* ---- App nav (thin icon sidebar) ---- */
+
+.app-nav {
+  width: 48px;
+  min-width: 48px;
+  background: #1c2127;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 2px;
+}
+
+.app-nav-btn.bp5-button {
+  color: rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+}
+
+.app-nav-btn.bp5-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.app-nav-btn.bp5-button.bp5-active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+/* ---- Content sidebar ---- */
+
+.app-sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #fff;
+  border-right: 1px solid #dce0e5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid #dce0e5;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+.sidebar-count {
+  font-size: 12px;
+  color: #8f99a8;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 8px;
+}
+
+.type-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.type-item:hover {
+  background: #f0f2f5;
+}
+
+.type-item.selected {
+  background: #e8ecf1;
+}
+
+.type-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.type-item-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1c2127;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.type-item-count {
+  font-size: 11px;
+  color: #8f99a8;
+}
+
+/* ---- Main ---- */
+
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px;
+}
+
+.app-main-inner {
+  max-width: 920px;
+}
+
+/* ---- Empty state ---- */
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Detail header                                   */
+/* ------------------------------------------------------------------ */
+
+.detail-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.detail-header-icon {
+  margin-top: 2px;
+  color: #5f6b7c;
+}
+
+.detail-header-text {
+  flex: 1;
+}
+
+.detail-header-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  line-height: 1.3;
+}
+
+.detail-header-name .bp5-editable-text-content,
+.detail-header-name .bp5-editable-text-input {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.detail-header-sub {
+  font-size: 13px;
+  color: #8f99a8;
+  margin-top: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Metadata card                                   */
+/* ------------------------------------------------------------------ */
+
+.meta-card {
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f2f5;
+  min-height: 32px;
+}
+
+.meta-row:last-child {
+  border-bottom: none;
+}
+
+.meta-label {
+  width: 130px;
+  min-width: 130px;
+  font-size: 13px;
+  color: #5f6b7c;
+}
+
+.meta-value {
+  flex: 1;
+  font-size: 13px;
+  color: #1c2127;
+  word-break: break-all;
+}
+
+.meta-value .bp5-editable-text-content,
+.meta-value .bp5-editable-text-input {
+  font-size: 13px;
+}
+
+.meta-value-mono {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 12px;
+  color: #5f6b7c;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Shared — Section card                                              */
+/* ------------------------------------------------------------------ */
+
+.section-card {
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eff1f3;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c2127;
+  margin: 0;
+}
+
+.section-count {
+  margin-left: 8px;
+}
+
+.section-body {
+  padding: 0;
+}
+
+.section-empty {
+  padding: 24px 20px;
+  text-align: center;
+  color: #8f99a8;
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Property list                                   */
+/* ------------------------------------------------------------------ */
+
+.prop-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 13px;
+  color: #1c2127;
+}
+
+.prop-row:last-child {
+  border-bottom: none;
+}
+
+.prop-icon {
+  color: #5f6b7c;
+}
+
+.prop-name {
+  flex: 1;
+}
+
+.prop-tags {
+  display: flex;
+  gap: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Links table                                     */
+/* ------------------------------------------------------------------ */
+
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.links-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8f99a8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eff1f3;
+}
+
+.links-table td {
+  font-size: 13px;
+  color: #1c2127;
+  padding: 10px 16px;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.links-table tr:last-child td {
+  border-bottom: none;
+}
+
+.link-dir-icon {
+  color: #5f6b7c;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ontology Manager — Action list                                     */
+/* ------------------------------------------------------------------ */
+
+.action-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 13px;
+}
+
+.action-row:last-child {
+  border-bottom: none;
+}
+
+.action-icon {
+  margin-top: 2px;
+  color: #2d72d2;
+}
+
+.action-info {
+  flex: 1;
+}
+
+.action-name {
+  font-weight: 500;
+  color: #1c2127;
+}
+
+.action-desc {
+  color: #5f6b7c;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Search bar                                       */
+/* ------------------------------------------------------------------ */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  max-width: 920px;
+}
+
+.search-bar .bp5-input-group {
+  flex: 1;
+}
+
+.search-all-toggle.bp5-switch {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Global search                                    */
+/* ------------------------------------------------------------------ */
+
+.global-search-wrapper {
+  max-width: 920px;
+}
+
+.global-search-summary {
+  font-size: 13px;
+  color: #8f99a8;
+  margin: 0 0 16px;
+}
+
+.global-search-group {
+  margin-bottom: 24px;
+}
+
+.global-search-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.global-search-group-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Instance list                                    */
+/* ------------------------------------------------------------------ */
+
+.instance-list-wrapper {
+  max-width: 920px;
+}
+
+.instance-list-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.instance-list-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  margin: 0;
+}
+
+.instance-list-count {
+  font-size: 13px;
+  color: #8f99a8;
+}
+
+.instance-table.bp5-html-table {
+  width: 100%;
+}
+
+.instance-table.bp5-html-table tbody tr {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Object Explorer — Object detail                                    */
+/* ------------------------------------------------------------------ */
+
+.obj-detail-wrapper {
+  max-width: 960px;
+}
+
+/* ---- Header ---- */
+
+.obj-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.obj-back-btn.bp5-button {
+  margin-right: 2px;
+}
+
+.obj-header-icon {
+  color: #5f6b7c;
+}
+
+.obj-header-text {
+  flex: 1;
+}
+
+.obj-header-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c2127;
+  line-height: 1.3;
+}
+
+.obj-header-sub {
+  font-size: 13px;
+  color: #8f99a8;
+  margin-top: 1px;
+}
+
+/* ---- Action strip ---- */
+
+.obj-action-strip {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* ---- Two-column layout ---- */
+
+.obj-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ---- Property rows ---- */
+
+.obj-prop-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #f5f6f8;
+  font-size: 13px;
+}
+
+.obj-prop-row:last-child {
+  border-bottom: none;
+}
+
+.obj-prop-label {
+  width: 140px;
+  min-width: 140px;
+  color: #5f6b7c;
+}
+
+.obj-prop-value {
+  flex: 1;
+  color: #1c2127;
+  word-break: break-word;
+}
+
+.obj-json {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  background: #f6f7f9;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: block;
+}
+
+.obj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ---- Link groups ---- */
+
+.obj-link-group {
+  padding: 6px 20px 10px;
+  border-bottom: 1px solid #f5f6f8;
+}
+
+.obj-link-group:last-child {
+  border-bottom: none;
+}
+
+.obj-link-group-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+  margin-bottom: 6px;
+  padding-top: 4px;
+}
+
+.obj-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  cursor: pointer;
+  color: #2d72d2;
+  font-size: 13px;
+  transition: color 0.1s;
+}
+
+.obj-link-item:hover {
+  color: #1c6dba;
+}
+
+.obj-link-arrow {
+  color: #8f99a8;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Action dialog                                                      */
+/* ------------------------------------------------------------------ */
+
+.action-result-json {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Batch Investigation Workspace                                     */
+/* ------------------------------------------------------------------ */
+
+.biw-shell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px 28px;
+  overflow: hidden;
+}
+
+.biw-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.biw-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+.biw-asof {
+  font-size: 12px;
+  color: #8f99a8;
+}
+
+/* ---- Metric cards ---- */
+.biw-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.biw-metric {
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-left-width: 3px;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.biw-metric-none {
+  border-left-color: #c5cbd3;
+}
+
+.biw-metric-warning {
+  border-left-color: #c87619;
+}
+
+.biw-metric-danger {
+  border-left-color: #cd4246;
+}
+
+.biw-metric-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.biw-metric-icon {
+  color: #8f99a8;
+}
+
+.biw-metric-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #5f6b7c;
+}
+
+.biw-metric-value {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: #1c2127;
+}
+
+.biw-metric-sub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #8f99a8;
+}
+
+/* ---- Body: table (left) + detail placeholder (right) ---- */
+.biw-body {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  min-height: 0;
+}
+
+.biw-left {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.biw-right {
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.biw-right-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ---- Filters ---- */
+.biw-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eff1f3;
+}
+
+.biw-filter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.biw-filter-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+}
+
+.biw-behind-toggle.bp5-switch {
+  margin: 0;
+  font-size: 13px;
+  color: #1c2127;
+}
+
+.biw-row-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: #8f99a8;
+}
+
+/* ---- Table ---- */
+.biw-table-wrap {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.biw-table.bp5-html-table {
+  width: 100%;
+}
+
+.biw-table.bp5-html-table th {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8f99a8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.biw-table.bp5-html-table tbody tr {
+  cursor: pointer;
+}
+
+.biw-table .biw-row-selected,
+.biw-table .biw-row-selected:hover {
+  background: #e8ecf1;
+}
+
+.biw-num {
+  text-align: right;
+}
+
+.biw-mono {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 12px;
+  color: #5f6b7c;
+}
+
+.biw-dim {
+  color: #b1b8c0;
+}
+
+.biw-empty {
+  text-align: center;
+  color: #8f99a8;
+  padding: 28px 0 !important;
+}
+
+.biw-maint-flag {
+  margin-left: 6px;
+  color: #c87619;
+  vertical-align: baseline;
+}
+
+/* ---- Sugar vs target pill ---- */
+.biw-sugar {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}
+
+.biw-sugar-sep {
+  color: #b1b8c0;
+}
+
+.biw-sugar-target {
+  color: #5f6b7c;
+}
+
+.biw-sugar-delta {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.biw-sugar-green {
+  background: #e7f5ec;
+  color: #1c6e42;
+}
+
+.biw-sugar-amber {
+  background: #fbf0e0;
+  color: #935610;
+}
+
+.biw-sugar-red {
+  background: #fbe9e7;
+  color: #ac2f33;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Batch detail panel                                                */
+/* ------------------------------------------------------------------ */
+
+.bd-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.bd-panel-center {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.bd-error {
+  color: #ac2f33;
+  font-size: 13px;
+}
+
+.bd-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #dce0e5;
+}
+
+.bd-header-icon {
+  color: #5f6b7c;
+}
+
+.bd-header-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c2127;
+  font-family: "SF Mono", "Fira Code", monospace;
+}
+
+.bd-header-sub {
+  font-size: 12px;
+  color: #8f99a8;
+  margin-top: 1px;
+}
+
+/* ---- Collapsible section ---- */
+.bd-section {
+  border-bottom: 1px solid #eff1f3;
+}
+
+.bd-section-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.bd-section-head:hover {
+  background: #f6f7f9;
+}
+
+.bd-section-caret {
+  color: #8f99a8;
+}
+
+.bd-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c2127;
+}
+
+.bd-section-count {
+  margin-left: 4px;
+}
+
+.bd-section-body {
+  padding: 4px 16px 14px;
+}
+
+/* ---- Label / value rows ---- */
+.bd-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.bd-row-label {
+  flex: 0 0 118px;
+  color: #5f6b7c;
+}
+
+.bd-row-value {
+  flex: 1;
+  color: #1c2127;
+  word-break: break-word;
+}
+
+.bd-vs-target {
+  color: #5f6b7c;
+  font-weight: 400;
+}
+
+.bd-dim {
+  color: #b1b8c0;
+}
+
+.bd-pad {
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+/* ---- Sugar curve ---- */
+.bd-curve-label {
+  margin: 12px 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+}
+
+.bd-curve-day {
+  color: #2d72d2;
+}
+
+.bd-curve-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bd-curve-pt {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 44px;
+  padding: 4px 6px;
+  border: 1px solid #dce0e5;
+  border-radius: 6px;
+  background: #f6f7f9;
+}
+
+.bd-curve-pt-active {
+  border-color: #2d72d2;
+  background: #e8f0fb;
+}
+
+.bd-curve-pt-day {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+}
+
+.bd-curve-pt-val {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: #1c2127;
+}
+
+.bd-curve-pt-active .bd-curve-pt-val {
+  color: #2d72d2;
+  font-weight: 600;
+}
+
+.bd-curve-target {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #5f6b7c;
+}
+
+.bd-curve-target strong {
+  color: #1c2127;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Maintenance ---- */
+.bd-maint-list,
+.bd-qt-list,
+.bd-audit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.bd-maint {
+  padding: 8px 10px;
+  border: 1px solid #eff1f3;
+  border-radius: 6px;
+}
+
+.bd-maint-flagged {
+  border-color: #fbd9a8;
+  background: #fdf6ec;
+}
+
+.bd-maint-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  font-size: 12px;
+}
+
+.bd-maint-type {
+  font-weight: 600;
+  color: #1c2127;
+  text-transform: capitalize;
+}
+
+.bd-maint-date {
+  color: #8f99a8;
+  font-variant-numeric: tabular-nums;
+}
+
+.bd-maint-notes {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #5f6b7c;
+  line-height: 1.4;
+}
+
+/* ---- Quality tests ---- */
+.bd-qt {
+  padding: 8px 10px;
+  border: 1px solid #eff1f3;
+  border-radius: 6px;
+}
+
+.bd-qt-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.bd-qt-date {
+  font-weight: 600;
+  color: #1c2127;
+  font-variant-numeric: tabular-nums;
+}
+
+.bd-qt-metric {
+  color: #1c2127;
+  font-variant-numeric: tabular-nums;
+}
+
+.bd-qt-tester {
+  margin-left: auto;
+  color: #8f99a8;
+}
+
+.bd-qt-notes {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #5f6b7c;
+  line-height: 1.4;
+}
+
+/* ---- Audit ---- */
+.bd-audit {
+  border: 1px solid #eff1f3;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bd-audit-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px;
+}
+
+.bd-audit-head:hover:not(:disabled) {
+  background: #f6f7f9;
+}
+
+.bd-audit-head:disabled {
+  cursor: default;
+}
+
+.bd-audit-actor {
+  color: #5f6b7c;
+}
+
+.bd-audit-time {
+  margin-left: auto;
+  color: #8f99a8;
+  font-variant-numeric: tabular-nums;
+}
+
+.bd-audit-body {
+  padding: 4px 10px 10px;
+  border-top: 1px solid #f0f2f5;
+}
+
+.bd-audit-k {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f99a8;
+  margin: 6px 0 2px;
+}
+
+.bd-json {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f6f7f9;
+  padding: 6px 8px;
+  border-radius: 4px;
+  margin: 0;
+  color: #1c2127;
+}
